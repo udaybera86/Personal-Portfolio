@@ -88,7 +88,7 @@ Description: Gerold - Personal Portfolio HTML5 Template
   --tj-fz-h4: 24px;
   --tj-fz-h5: 22px;
   --tj-fz-h6: 18px;
-  --tj-fz-sub-title: 36px;
+  --tj-fz-sub-title: 32px;
 }
 
 * {
@@ -969,7 +969,7 @@ body.loaded {
 }
 
 .hero-title {
-  font-size: 65px;
+  font-size: 60px;
   background: var(--tj-theme-primary);
   background: -webkit-gradient(
     linear,
@@ -1060,6 +1060,10 @@ body.loaded {
 
 .hero-section .funfact-area {
   margin-top: 120px;
+}
+
+.counter-percentage {
+  font-size: 46px;
 }
 /* END: Hero Section */
 

@@ -247,8 +247,26 @@ Description: Gerold - Personal Portfolio HTML5 Template
     const svgText = document.querySelector(
       ".hero-section .intro_text svg text"
     );
+    const preloaderDuration = 3000;
+
+    const startTime = new Date().getTime();
+
+    const checkProgressInterval = setInterval(function () {
+      const currentTime = new Date().getTime();
+      const elapsedTime = currentTime - startTime;
+
+      const remainingTime = Math.max(preloaderDuration - elapsedTime, 0);
+
+      if (remainingTime <= 1000) {
+        clearInterval(checkProgressInterval);
+        startCounterAnimation();
+      }
+    }, 100);
+
     const tl = gsap.timeline({
-      onComplete: startStrokeAnimation,
+      onComplete: function () {
+        startStrokeAnimation();
+      },
     });
     const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
     const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
@@ -347,14 +365,17 @@ Description: Gerold - Personal Portfolio HTML5 Template
     /*------------------------------------------------------
   	/  Funfact
   	/------------------------------------------------------*/
-    if ($(".odometer").length > 0) {
-      $(".odometer").appear(function () {
-        var odo = $(".odometer");
-        odo.each(function () {
-          var countNumber = $(this).attr("data-count");
-          $(this).html(countNumber);
+    function startCounterAnimation() {
+      // Your counter code here
+      if ($(".odometer").length > 0) {
+        $(".odometer").appear(function () {
+          var odo = $(".odometer");
+          odo.each(function () {
+            var countNumber = $(this).attr("data-count");
+            $(this).html(countNumber);
+          });
         });
-      });
+      }
     }
 
     // Form Validation

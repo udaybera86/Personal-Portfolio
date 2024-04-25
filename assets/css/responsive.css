@@ -577,10 +577,10 @@
   }
   .hero-sub-title {
     margin-bottom: 0;
-    font-size: 22px;
+    font-size: 20px;
   }
   .hero-title {
-    font-size: 35px;
+    font-size: 32px;
     margin-bottom: 0;
   }
   .hero-image-box {
@@ -588,6 +588,9 @@
   }
   .hero-image-box img {
     max-width: 80%;
+  }
+  .hero-content-box .lead {
+    font-size: 18px;
   }
   .hero-content-box .button-box {
     margin-top: 20px;
@@ -599,12 +602,16 @@
   .funfact-item {
     justify-content: center;
     margin-bottom: 30px;
+    gap: 5px;
   }
   .funfact-item .number {
-    font-size: 45px;
+    font-size: 42px;
+  }
+  .counter-percentage {
+    font-size: 36px;
   }
   .funfact-item .text {
-    margin-top: -15px;
+    text-align: center;
   }
 
   /* services section */

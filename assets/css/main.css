@@ -934,7 +934,7 @@ body.loaded {
 }
 
 .hero-section .intro_text svg text.animate-stroke {
-  animation: stroke 4s; /* Adjust the duration as needed */
+  animation: stroke 4s;
   opacity: 0.7;
 }
 @keyframes stroke {
